@@ -40,6 +40,7 @@ public class SearchResultPage extends BasePage {
         }
 
         Collections.sort(pricesList, Collections.reverseOrder());
+        System.out.println("£" + pricesList.get(1));
 
         return ("£" + pricesList.get(1));
     }
