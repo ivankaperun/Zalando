@@ -5,6 +5,7 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="https://www.zalando.co.uk/"/>
     <parameter name="timeout" value="10"/>
+    <parameter name="searchKey" value="bags"/>
 
     <test name="SimpleSearchTest" >
         <classes>

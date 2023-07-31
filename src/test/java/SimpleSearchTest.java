@@ -1,3 +1,4 @@
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.IndexPage;
 import pages.SearchResultPage;
@@ -5,11 +6,12 @@ import pages.SearchResultPage;
 public class SimpleSearchTest extends SetUp {
 
     @Test
-    public void simpleSearchTest () {
+    @Parameters({"searchKey"})
+    public void simpleSearchTest (String searchKey) {
     IndexPage indexPage = new IndexPage(driver);
     SearchResultPage searchResultPage = new SearchResultPage(driver);
 
-    indexPage.setSearchInput("bags");
+    indexPage.setSearchInput(searchKey);
     indexPage.clickSearchResultsAutoSuggestions();
 
     String firstItemText = searchResultPage.getSearchResultsFirstElementText();
