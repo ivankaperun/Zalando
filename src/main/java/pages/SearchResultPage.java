@@ -46,36 +46,18 @@ public class SearchResultPage extends BasePage {
     }
 
     public String getTitleAndPriceOfMostExpensiveProduct() {
-        HashMap<String,Double> hm = new HashMap<>();
+        TreeMap<Double, String> hm = new TreeMap<>();
 
         for (WebElement product:productsTitles) {
             String productTitle = product.findElement(By.className("KxHAYs")).getText();
             String productPrice = product.findElement(By.tagName("span")).getText();
             Double productPriceDouble = Double.parseDouble(productPrice.replace("£",""));
-            hm.put(productTitle,productPriceDouble);
+            hm.put(productPriceDouble,productTitle);
         }
 
+        double lastEntry = hm.lastKey();
 
-        //sorting hm by prices:
-        LinkedHashMap<String, Double> sortedHm = new LinkedHashMap<>();
-        ArrayList<Double> list = new ArrayList<>();
-
-        for (Map.Entry<String, Double> entry : hm.entrySet()) {
-            list.add(entry.getValue());
-        }
-
-        list.sort(Collections.reverseOrder());
-
-        for (double price : list) {
-            for (Map.Entry<String, Double> entry : hm.entrySet()) {
-                if (entry.getValue().equals(price)) {
-                    sortedHm.put(entry.getKey(), price);
-                }
-            }
-        }
-
-        Map.Entry<String,Double> entry = sortedHm.entrySet().iterator().next();
-        return(entry.getKey() + " " + " - " + "£"+entry.getValue());
+        return(hm.get(lastEntry) + " " + " - " + "£" + lastEntry);
     }
 
 }
