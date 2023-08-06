@@ -20,5 +20,8 @@ public class SimpleSearchTest extends SetUp {
     String productWithHighestPrice = searchResultPage.findProductWithHighestPrice();
     System.out.println("Highest price for found products is " + productWithHighestPrice);
 
+    String mostExpensiveProductOnThePage = searchResultPage.getTitleAndPriceOfMostExpensiveProduct();
+    System.out.println("Most expensive product on the page is " + mostExpensiveProductOnThePage);
+
 }
 }
