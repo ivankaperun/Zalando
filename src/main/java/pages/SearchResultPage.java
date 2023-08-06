@@ -64,7 +64,7 @@ public class SearchResultPage extends BasePage {
             list.add(entry.getValue());
         }
 
-        Collections.sort(list, Collections.reverseOrder());
+        list.sort(Collections.reverseOrder());
 
         for (double price : list) {
             for (Map.Entry<String, Double> entry : hm.entrySet()) {
