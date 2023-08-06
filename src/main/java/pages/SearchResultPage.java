@@ -36,28 +36,36 @@ public class SearchResultPage extends BasePage {
     public String findProductWithHighestPrice() {
         ArrayList<Double> pricesList = new ArrayList<>();
 
-        for(WebElement productPrice:productPricesList) {
-            pricesList.add(Double.parseDouble(productPrice.getText().replace("£","")));
+        try {
+            for(WebElement productPrice:productPricesList) {
+                pricesList.add(Double.parseDouble(productPrice.getText().replace("£","")));
+            }
+
+            Collections.sort(pricesList, Collections.reverseOrder());
+
+            return ("£" + pricesList.get(1));
+        } catch(Exception e) {
+            return (e.getMessage());
         }
-
-        Collections.sort(pricesList, Collections.reverseOrder());
-
-        return ("£" + pricesList.get(1));
     }
 
     public String getTitleAndPriceOfMostExpensiveProduct() {
         TreeMap<Double, String> hm = new TreeMap<>();
 
-        for (WebElement product:productsTitles) {
-            String productTitle = product.findElement(By.className("KxHAYs")).getText();
-            String productPrice = product.findElement(By.tagName("span")).getText();
-            Double productPriceDouble = Double.parseDouble(productPrice.replace("£",""));
-            hm.put(productPriceDouble,productTitle);
+        try{
+            for (WebElement product:productsTitles) {
+                String productTitle = product.findElement(By.className("KxHAYs")).getText();
+                String productPrice = product.findElement(By.tagName("span")).getText();
+                Double productPriceDouble = Double.parseDouble(productPrice.replace("£",""));
+                hm.put(productPriceDouble,productTitle);
+            }
+
+            double lastEntry = hm.lastKey();
+
+            return(hm.get(lastEntry) + " " + " - " + "£" + lastEntry);
+        } catch (Exception e) {
+            return (e.getMessage());
         }
-
-        double lastEntry = hm.lastKey();
-
-        return(hm.get(lastEntry) + " " + " - " + "£" + lastEntry);
     }
 
 }

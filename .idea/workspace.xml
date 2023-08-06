@@ -125,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691320950159</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="replace HashMap with TreeMap">
+      <created>1691323466278</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1691323466278</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +145,7 @@
     <MESSAGE value="added method that prints most expensive product title and price on the page" />
     <MESSAGE value="replace for loop by enhanced for loop" />
     <MESSAGE value="replace Collections.sort by list.sort" />
-    <option name="LAST_COMMIT_MESSAGE" value="replace Collections.sort by list.sort" />
+    <MESSAGE value="replace HashMap with TreeMap" />
+    <option name="LAST_COMMIT_MESSAGE" value="replace HashMap with TreeMap" />
   </component>
 </project>
