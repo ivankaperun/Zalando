@@ -41,7 +41,7 @@ public class SearchResultPage extends BasePage {
                 pricesList.add(Double.parseDouble(productPrice.getText().replace("£","")));
             }
 
-            Collections.sort(pricesList, Collections.reverseOrder());
+            pricesList.sort(Collections.reverseOrder());
 
             return ("£" + pricesList.get(1));
         } catch(Exception e) {
