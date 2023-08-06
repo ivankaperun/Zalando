@@ -48,9 +48,9 @@ public class SearchResultPage extends BasePage {
     public String getTitleAndPriceOfMostExpensiveProduct() {
         HashMap<String,Double> hm = new HashMap<>();
 
-        for (int i = 0; i < productsTitles.size(); i++) {
-            String productTitle = productsTitles.get(i).findElement(By.className("KxHAYs")).getText();
-            String productPrice = productsTitles.get(i).findElement(By.tagName("span")).getText();
+        for (WebElement product:productsTitles) {
+            String productTitle = product.findElement(By.className("KxHAYs")).getText();
+            String productPrice = product.findElement(By.tagName("span")).getText();
             Double productPriceDouble = Double.parseDouble(productPrice.replace("£",""));
             hm.put(productTitle,productPriceDouble);
         }

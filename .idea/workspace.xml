@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9d52c84-01d7-4a96-9b31-66e2673e6442" name="Changes" comment="added parameters usage to .xml file">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c9d52c84-01d7-4a96-9b31-66e2673e6442" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SearchResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SimpleSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SimpleSearchTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +15,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="d83a341f-a3cd-43a0-bd97-3e48840b68ac" />
   </component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
@@ -110,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690790694272</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added method that prints most expensive product title and price on the page">
+      <created>1691318839320</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1691318839320</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,6 +121,7 @@
     <MESSAGE value="added logging" />
     <MESSAGE value="remove logging" />
     <MESSAGE value="added parameters usage to .xml file" />
-    <option name="LAST_COMMIT_MESSAGE" value="added parameters usage to .xml file" />
+    <MESSAGE value="added method that prints most expensive product title and price on the page" />
+    <option name="LAST_COMMIT_MESSAGE" value="added method that prints most expensive product title and price on the page" />
   </component>
 </project>
