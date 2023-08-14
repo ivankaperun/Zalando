@@ -24,7 +24,7 @@ public class SearchResultPage extends BasePage {
     @FindBy(xpath = "//div[@data-zalon-partner-target='true']//article[@role='link']//a//header")
     private List<WebElement> productsTitles;
 
-    @FindBy(xpath = "//a[@title='next page']//*[name()='svg']")
+    @FindBy(xpath = "//a[@title='next page']")
     private WebElement paginationArrow;
 
     @FindBy(xpath = "//button[@id='uc-btn-accept-banner']")
