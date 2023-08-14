@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,7 +17,11 @@ public class PDPPage extends BasePage {
     WebElement productsCartCounter;
 
     public void clickOnAddToCartButton() {
-        addToCartButton.click();
+        try {
+            addToCartButton.click();
+        } catch (NoSuchFrameException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public String getNumberOfProductsInCart() {
