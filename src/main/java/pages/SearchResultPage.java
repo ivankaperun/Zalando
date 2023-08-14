@@ -34,7 +34,7 @@ public class SearchResultPage extends BasePage {
     public String getSearchResultsFirstElementText() {
 
         try {
-            return (searchResultElements.get(1).getText());
+            return (searchResultElements.get(0).getText());
         }
         catch(Exception e) {
             return (e.getMessage());
@@ -50,7 +50,7 @@ public class SearchResultPage extends BasePage {
 
             pricesList.sort(Collections.reverseOrder());
 
-            return ("£" + pricesList.get(1));
+            return ("£" + pricesList.get(0));
         } catch(Exception e) {
             return (e.getMessage());
         }

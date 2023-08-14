@@ -19,11 +19,11 @@ public class PaginationPage extends BasePage {
     public void clickFirstProductOnThePage() {
         driver.navigate().refresh();
         try {
-            productsList.get(1).click();
+            productsList.get(0).click();
             waitUntilPageIsFullyLoaded(wait);
         } catch (StaleElementReferenceException e) {
             driver.navigate().refresh();
-            productsList.get(1).click();
+            productsList.get(0).click();
             waitUntilPageIsFullyLoaded(wait);
         }
     }

@@ -31,9 +31,12 @@ public class SimpleSearchTest extends SetUp {
 
     searchResultPage.scrollDownToThePaginationAndClickNextPage();
     searchResultPage.clickOnBanner();
+
     paginationPage.clickFirstProductOnThePage();
+
     pdpPage.clickOnAddToCartButton();
     String actual_result = pdpPage.getNumberOfProductsInCart();
+    System.out.println("Number of products in Cart: " + actual_result);
     assertEquals(actual_result, "1");
 
 }
