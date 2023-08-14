@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,6 +23,9 @@ public class SearchResultPage extends BasePage {
 
     @FindBy(xpath = "//div[@data-zalon-partner-target='true']//article[@role='link']//a//header")
     private List<WebElement> productsTitles;
+
+    @FindBy(xpath = "//a[@title='next page']//*[name()='svg']")
+    private WebElement paginationArrow;
 
     //methods
     public String getSearchResultsFirstElementText() {
@@ -66,6 +70,13 @@ public class SearchResultPage extends BasePage {
         } catch (Exception e) {
             return (e.getMessage());
         }
+    }
+
+    public void scrollDownToThePaginationAndClickNextPage() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", paginationArrow);
+        paginationArrow.click();
+        waitUntilPageIsFullyLoaded(wait);
     }
 
 }
