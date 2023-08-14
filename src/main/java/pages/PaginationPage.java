@@ -18,16 +18,12 @@ public class PaginationPage extends BasePage {
 
     public void clickFirstProductOnThePage() {
         driver.navigate().refresh();
-        if(productsList.size()!=0)
-        {
-        try
-        {
+        if(productsList.size()!=0) {
+        try {
             productsList.get(0).click();
             waitUntilPageIsFullyLoaded(wait);
-        } catch (StaleElementReferenceException e)
-        {
-            if(productsList.size()!=0)
-            {
+        } catch (StaleElementReferenceException e) {
+            if(productsList.size()!=0) {
                 productsList.get(0).click();
                 waitUntilPageIsFullyLoaded(wait);
             } else {
