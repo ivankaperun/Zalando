@@ -1,7 +1,11 @@
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.IndexPage;
+import pages.PDPPage;
+import pages.PaginationPage;
 import pages.SearchResultPage;
+
+import static org.testng.Assert.assertEquals;
 
 public class SimpleSearchTest extends SetUp {
 
@@ -10,6 +14,8 @@ public class SimpleSearchTest extends SetUp {
     public void simpleSearchTest (String searchKey) {
     IndexPage indexPage = new IndexPage(driver);
     SearchResultPage searchResultPage = new SearchResultPage(driver);
+    PaginationPage paginationPage = new PaginationPage(driver);
+    PDPPage pdpPage = new PDPPage(driver);
 
     indexPage.setSearchInput(searchKey);
     indexPage.clickSearchResultsAutoSuggestions();
@@ -22,6 +28,13 @@ public class SimpleSearchTest extends SetUp {
 
     String mostExpensiveProductOnThePage = searchResultPage.getTitleAndPriceOfMostExpensiveProduct();
     System.out.println("Most expensive product on the page is " + mostExpensiveProductOnThePage);
+
+    searchResultPage.scrollDownToThePaginationAndClickNextPage();
+    searchResultPage.clickOnBanner();
+    paginationPage.clickFirstProductOnThePage();
+    pdpPage.clickOnAddToCartButton();
+    String actual_result = pdpPage.getNumberOfProductsInCart();
+    assertEquals(actual_result, "1");
 
 }
 }

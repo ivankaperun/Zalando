@@ -27,6 +27,9 @@ public class SearchResultPage extends BasePage {
     @FindBy(xpath = "//a[@title='next page']//*[name()='svg']")
     private WebElement paginationArrow;
 
+    @FindBy(xpath = "//button[@id='uc-btn-accept-banner']")
+    private WebElement bannerContent;
+
     //methods
     public String getSearchResultsFirstElementText() {
 
@@ -56,9 +59,9 @@ public class SearchResultPage extends BasePage {
     public String getTitleAndPriceOfMostExpensiveProduct() {
         TreeMap<Double, String> hm = new TreeMap<>();
 
-        try{
+        if(productsTitles.size()!=0) {
             for (WebElement product:productsTitles) {
-                String productTitle = product.findElement(By.className("KxHAYs")).getText();
+                String productTitle = product.findElement(By.tagName("h3")).getText();
                 String productPrice = product.findElement(By.tagName("span")).getText();
                 Double productPriceDouble = Double.parseDouble(productPrice.replace("£",""));
                 hm.put(productPriceDouble,productTitle);
@@ -67,8 +70,15 @@ public class SearchResultPage extends BasePage {
             double lastEntry = hm.lastKey();
 
             return(hm.get(lastEntry) + " " + " - " + "£" + lastEntry);
-        } catch (Exception e) {
-            return (e.getMessage());
+        } else
+        {
+            return ("Array productPricesList is empty");
+        }
+    }
+
+    public void clickOnBanner() {
+        if (bannerContent.isDisplayed()) {
+            bannerContent.click();
         }
     }
 

@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9d52c84-01d7-4a96-9b31-66e2673e6442" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/PDPPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/PaginationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/PaginationPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SearchResultPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SimpleSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SimpleSearchTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691327687422</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added new PaginationPage">
+      <created>1692011212702</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1692011212702</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +179,7 @@
     <MESSAGE value="replace HashMap with TreeMap" />
     <MESSAGE value="added try catch blocks to handle possible exceptions" />
     <MESSAGE value="replace Collections.sort with list.sort" />
-    <option name="LAST_COMMIT_MESSAGE" value="replace Collections.sort with list.sort" />
+    <MESSAGE value="added new PaginationPage" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new PaginationPage" />
   </component>
 </project>
