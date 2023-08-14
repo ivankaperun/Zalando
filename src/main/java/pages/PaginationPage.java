@@ -19,12 +19,20 @@ public class PaginationPage extends BasePage {
     public void clickFirstProductOnThePage() {
         driver.navigate().refresh();
         try {
-            productsList.get(0).click();
-            waitUntilPageIsFullyLoaded(wait);
+            if(productsList.size()!=0) {
+                productsList.get(0).click();
+                waitUntilPageIsFullyLoaded(wait);
+            } else {
+                System.out.println("Array productsList is empty");
+            }
         } catch (StaleElementReferenceException e) {
             driver.navigate().refresh();
-            productsList.get(0).click();
-            waitUntilPageIsFullyLoaded(wait);
+            if(productsList.size()!=0) {
+                productsList.get(0).click();
+                waitUntilPageIsFullyLoaded(wait);
+            } else {
+                System.out.println("Array productsList is empty");
+            }
         }
     }
 }
