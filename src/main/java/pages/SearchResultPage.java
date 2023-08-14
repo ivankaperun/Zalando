@@ -33,27 +33,28 @@ public class SearchResultPage extends BasePage {
     //methods
     public String getSearchResultsFirstElementText() {
 
-        try {
+        if (searchResultElements.size()!=0) {
             return (searchResultElements.get(0).getText());
         }
-        catch(Exception e) {
-            return (e.getMessage());
+        else {
+            return ("Array searchResultElements is empty");
         }
     }
     public String findProductWithHighestPrice() {
         ArrayList<Double> pricesList = new ArrayList<>();
 
-        try {
-            for(WebElement productPrice:productPricesList) {
-                pricesList.add(Double.parseDouble(productPrice.getText().replace("£","")));
+        if(productPricesList.size()!=0) {
+            for (WebElement productPrice : productPricesList) {
+                pricesList.add(Double.parseDouble(productPrice.getText().replace("£", "")));
             }
 
             pricesList.sort(Collections.reverseOrder());
 
             return ("£" + pricesList.get(0));
-        } catch(Exception e) {
-            return (e.getMessage());
-        }
+        } else
+            {
+                return ("Array productPricesList is empty");
+            }
     }
 
     public String getTitleAndPriceOfMostExpensiveProduct() {
@@ -72,7 +73,7 @@ public class SearchResultPage extends BasePage {
             return(hm.get(lastEntry) + " " + " - " + "£" + lastEntry);
         } else
         {
-            return ("Array productPricesList is empty");
+            return ("Array productsTitles is empty");
         }
     }
 
