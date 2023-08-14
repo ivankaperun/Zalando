@@ -7,7 +7,7 @@
     <list default="true" id="c9d52c84-01d7-4a96-9b31-66e2673e6442" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/PaginationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/PaginationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/SearchResultPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/SearchResultPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/PaginationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/PaginationPage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692020518491</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added verification on empty array list">
+      <created>1692021778792</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1692021778792</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,8 +226,8 @@
     <MESSAGE value="added new PaginationPage" />
     <MESSAGE value="added Pagination, PDP pages and modified SimpleSearchTest" />
     <MESSAGE value="small fix" />
-    <MESSAGE value="added verification on empty array list" />
     <MESSAGE value="changed xpath" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed xpath" />
+    <MESSAGE value="added verification on empty array list" />
+    <option name="LAST_COMMIT_MESSAGE" value="added verification on empty array list" />
   </component>
 </project>

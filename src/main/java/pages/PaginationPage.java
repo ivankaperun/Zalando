@@ -26,7 +26,6 @@ public class PaginationPage extends BasePage {
                 System.out.println("Array productsList is empty");
             }
         } catch (StaleElementReferenceException e) {
-            driver.navigate().refresh();
             if(productsList.size()!=0) {
                 productsList.get(0).click();
                 waitUntilPageIsFullyLoaded(wait);
