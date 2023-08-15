@@ -14,7 +14,6 @@ public class SimpleSearchTest extends SetUp {
     public void simpleSearchTest (String searchKey) {
     IndexPage indexPage = new IndexPage(driver);
     SearchResultPage searchResultPage = new SearchResultPage(driver);
-    PaginationPage paginationPage = new PaginationPage(driver);
     PDPPage pdpPage = new PDPPage(driver);
 
     indexPage.setSearchInput(searchKey);
@@ -32,6 +31,7 @@ public class SimpleSearchTest extends SetUp {
     searchResultPage.scrollDownToThePaginationAndClickNextPage();
     searchResultPage.clickOnBanner();
 
+    PaginationPage paginationPage = new PaginationPage(driver);
     paginationPage.clickFirstProductOnThePage();
 
     pdpPage.clickOnAddToCartButton();
