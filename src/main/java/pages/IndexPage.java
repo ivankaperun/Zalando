@@ -13,10 +13,10 @@ public class IndexPage extends BasePage {
 
     //elements
     @FindBy(xpath = "//input[@id='header-search-input']")
-    protected WebElement searchInput;
+    private WebElement searchInput;
 
     @FindBy(xpath = "//div[@id='header-search-dropdown']//ul//li")
-    protected List<WebElement> searchResultsAutoSuggestions;
+    private List<WebElement> searchResultsAutoSuggestions;
 
     //action methods
     public void setSearchInput(String keyword) {
@@ -25,7 +25,7 @@ public class IndexPage extends BasePage {
 
     public void clickSearchResultsAutoSuggestions() {
         searchResultsAutoSuggestions.get(0).click();
-        waitUntilPageIsFullyLoaded(wait);
+            waitUntilPageIsFullyLoaded(wait);
     }
 
     /*public SearchResultPage getSearchResultsPage() { //one more technique

@@ -1,10 +1,8 @@
 package pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.*;
 
@@ -29,6 +27,9 @@ public class SearchResultPage extends BasePage {
 
     @FindBy(xpath = "//button[@id='uc-btn-accept-banner']")
     private WebElement bannerContent;
+
+    @FindBy(xpath = "//article[@role='link']")
+    private List<WebElement> productsList;
 
     //methods
     public String getSearchResultsFirstElementText() {
@@ -88,6 +89,30 @@ public class SearchResultPage extends BasePage {
         js.executeScript("arguments[0].scrollIntoView();", paginationArrow);
         paginationArrow.click();
         waitUntilPageIsFullyLoaded(wait);
+    }
+
+    public void clickFirstProductOnThePage() {
+        driver.navigate().refresh();
+        productsList.get(0).click();
+        waitUntilPageIsFullyLoaded(wait);
+
+        /*
+        driver.navigate().refresh();
+        if(productsList.size()!=0) {
+            try {
+                productsList.get(0).click();
+                waitUntilPageIsFullyLoaded(wait);
+            } catch (StaleElementReferenceException e) {
+                if(productsList.size()!=0) {
+                    productsList.get(0).click();
+                    waitUntilPageIsFullyLoaded(wait);
+                } else {
+                    System.out.println("Array productsList is empty");
+                }
+            }
+        } else {
+            System.out.println("Array productsList is empty");
+        }*/
     }
 
 }

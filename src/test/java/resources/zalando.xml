@@ -12,4 +12,9 @@
             <class name="SimpleSearchTest" />
         </classes>
     </test>
+    <test name="SearchByCategoryTest" >
+        <classes>
+            <class name="SearchByCategoryTest" />
+        </classes>
+    </test>
 </suite>

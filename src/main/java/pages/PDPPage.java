@@ -17,18 +17,10 @@ public class PDPPage extends BasePage {
     WebElement productsCartCounter;
 
     public void clickOnAddToCartButton() {
-        try {
             addToCartButton.click();
-        } catch (NoSuchElementException e) {
-            System.out.println(e.getMessage());
-        }
     }
 
     public String getNumberOfProductsInCart() {
-        try{
             return productsCartCounter.getText();
-        } catch (Exception e) {
-            return (e.getMessage());
-        }
     }
 }
