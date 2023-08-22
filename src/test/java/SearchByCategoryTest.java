@@ -8,12 +8,10 @@ import static org.testng.Assert.assertEquals;
 public class SearchByCategoryTest extends SetUp {
     @Test
     public void searchByCategoryTest () {
-        IndexPage indexPage = new IndexPage(driver);
         WomenClothPage womenClothPage = new WomenClothPage(driver);
         CategoryPage categoryPage = new CategoryPage(driver);
 
         womenClothPage.clickOnWomenClothingTab();
-        //womenClothPage.clickOnBanner();
         womenClothPage.searchByCategory();
         String actual_result = categoryPage.getOpenedCategoryName();
         System.out.println("Name of opened Category: " + actual_result);

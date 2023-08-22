@@ -95,24 +95,6 @@ public class SearchResultPage extends BasePage {
         driver.navigate().refresh();
         productsList.get(0).click();
         waitUntilPageIsFullyLoaded(wait);
-
-        /*
-        driver.navigate().refresh();
-        if(productsList.size()!=0) {
-            try {
-                productsList.get(0).click();
-                waitUntilPageIsFullyLoaded(wait);
-            } catch (StaleElementReferenceException e) {
-                if(productsList.size()!=0) {
-                    productsList.get(0).click();
-                    waitUntilPageIsFullyLoaded(wait);
-                } else {
-                    System.out.println("Array productsList is empty");
-                }
-            }
-        } else {
-            System.out.println("Array productsList is empty");
-        }*/
     }
 
 }

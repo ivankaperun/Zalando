@@ -18,8 +18,7 @@ public class WomenClothPage extends BasePage {
     @FindBy(xpath = "//button[@id='uc-btn-accept-banner']")
     private WebElement bannerContent;
 
-    @FindBy(xpath = "//span[@class='KxHAYs lystZ1 FxZV-M HlZ_Tf'][normalize-space()='Clothing']")
-    //li[contains(@aria-label,'Clothing')]//a//span[contains(.,'Clothing')]
+    @FindBy(xpath = "//li[contains(@aria-label,'Clothing')]//a//span[normalize-space()='Clothing']")
     private WebElement categoryClothing;
 
     @FindBy(xpath = "//span[normalize-space()='Hoodies & sweatshirts']")
