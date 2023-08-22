@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.*;
 
@@ -11,7 +10,6 @@ public class SearchResultPage extends BasePage {
     public SearchResultPage (WebDriver driver) {
         super(driver);
     }
-
     //elements
     @FindBy(xpath = "//article[@role='link']//h3[last()]")
     private List<WebElement> searchResultElements;
