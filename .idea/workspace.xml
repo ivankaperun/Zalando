@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9d52c84-01d7-4a96-9b31-66e2673e6442" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/LoginProcessTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/IndexPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/IndexPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SearchResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SearchByCategoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SearchByCategoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SetUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SetUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/zalando.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/zalando.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/BasePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/PDPPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/PDPPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/SearchResultPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/SearchResultPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/WomenClothPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/WomenClothPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SearchByCategoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SearchByCategoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LoginProcessTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginProcessTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692683136485</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="added login page, login test">
+      <created>1693234282004</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1693234282004</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,6 +317,7 @@
     <MESSAGE value="small refactoring" />
     <MESSAGE value="added new Test, made refactoring" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="added login page, login test" />
+    <option name="LAST_COMMIT_MESSAGE" value="added login page, login test" />
   </component>
 </project>
