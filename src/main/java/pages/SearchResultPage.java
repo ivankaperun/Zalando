@@ -3,9 +3,16 @@ package pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.FluentWait;
+import com.google.common.base.Function;
+
 
 import java.time.Duration;
 import java.util.*;
+
+import static utils.Constants.DEFAULT_TIMEOUT;
 
 public class SearchResultPage extends BasePage {
     //constructor
@@ -92,9 +99,12 @@ public class SearchResultPage extends BasePage {
     }
 
     public void clickFirstProductOnThePage() {
-        driver.navigate().refresh();
+        //driver.navigate().refresh();
         //create wait
-        wait.until(ExpectedConditions.visibilityOf(productsList.get(0)));
+        //WebDriverWait myWait = new WebDriverWait(driver, Duration.ofSeconds(6));
+
+        waitVisibilityOfElement(DEFAULT_TIMEOUT,productsList.get(0));
+        waitForAjaxToComplete(DEFAULT_TIMEOUT);
         productsList.get(0).click();
         waitUntilPageIsFullyLoaded(wait);
     }

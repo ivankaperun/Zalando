@@ -2,7 +2,9 @@ package pages;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -21,6 +23,16 @@ public class BasePage {
 
     public void waitUntilPageIsFullyLoaded(WebDriverWait webDriverWait) {
         webDriverWait.until(webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
+    }
+
+    public void waitVisibilityOfElement(long timeToWait, WebElement element) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeToWait));
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public void waitForAjaxToComplete(long timeToWait) {
+        new WebDriverWait(driver, Duration.ofSeconds(timeToWait)).until(
+                webDriver -> ((JavascriptExecutor) webDriver).executeScript("return window.jQuery != undefined && jQuery.active == 0;"));
     }
 
 }
