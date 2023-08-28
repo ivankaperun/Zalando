@@ -1,6 +1,7 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -17,6 +18,13 @@ public class SetUp {
         if(browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
+            driver.get(url);
+            driver.manage().window().maximize();
+        }
+        if(browser.equalsIgnoreCase("firefox")) {
+            WebDriverManager.chromedriver().setup();
+            driver = new FirefoxDriver();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
             driver.get(url);
             driver.manage().window().maximize();

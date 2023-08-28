@@ -5,10 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9d52c84-01d7-4a96-9b31-66e2673e6442" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/LoginProcessTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/PDPPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/PDPPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/IndexPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/IndexPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SearchResultPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SearchByCategoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SearchByCategoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SetUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SetUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/zalando.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/zalando.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/BasePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/PDPPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/PDPPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/SearchResultPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/SearchResultPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/WomenClothPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/WomenClothPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SearchByCategoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SearchByCategoryTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,17 +52,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "C:/Users/Ivanna_Lozynska-Peru/IdeaProjects/Zalando",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ivanna_Lozynska-Peru/IdeaProjects/Zalando&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="TestNG.C:/Users/Ivanna_Lozynska-Peru/IdeaProjects/Zalando/src/test/java/resources/zalando.xml">
     <configuration name="C:/Users/Ivanna_Lozynska-Peru/IdeaProjects/Zalando/src/test/java/resources/zalando.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Zalando" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/resources/zalando.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginProcessTest.loginProcessTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Zalando" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LoginProcessTest" />
+      <option name="METHOD_NAME" value="loginProcessTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -73,6 +96,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.C:/Users/Ivanna_Lozynska-Peru/IdeaProjects/Zalando/src/test/java/resources/zalando.xml" />
+        <item itemvalue="TestNG.LoginProcessTest.loginProcessTest" />
         <item itemvalue="TestNG.SimpleSearchTest.simpleSearchTest" />
       </list>
     </recent_temporary>
@@ -265,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692682996550</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="refactoring">
+      <created>1692683136485</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1692683136485</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

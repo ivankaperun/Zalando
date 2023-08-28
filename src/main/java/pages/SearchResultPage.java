@@ -2,7 +2,9 @@ package pages;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.time.Duration;
 import java.util.*;
 
 public class SearchResultPage extends BasePage {
@@ -91,6 +93,8 @@ public class SearchResultPage extends BasePage {
 
     public void clickFirstProductOnThePage() {
         driver.navigate().refresh();
+        //create wait
+        wait.until(ExpectedConditions.visibilityOf(productsList.get(0)));
         productsList.get(0).click();
         waitUntilPageIsFullyLoaded(wait);
     }

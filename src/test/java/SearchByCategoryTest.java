@@ -1,6 +1,5 @@
 import org.testng.annotations.Test;
 import pages.CategoryPage;
-import pages.IndexPage;
 import pages.WomenClothPage;
 
 import static org.testng.Assert.assertEquals;
