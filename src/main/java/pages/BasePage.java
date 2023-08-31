@@ -30,9 +30,4 @@ public class BasePage {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public void waitForAjaxToComplete(long timeToWait) {
-        new WebDriverWait(driver, Duration.ofSeconds(timeToWait)).until(
-                webDriver -> ((JavascriptExecutor) webDriver).executeScript("return window.jQuery != undefined && jQuery.active == 0;"));
-    }
-
 }

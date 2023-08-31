@@ -6,13 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c9d52c84-01d7-4a96-9b31-66e2673e6442" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SearchResultPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SimpleSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SimpleSearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/zalando.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/zalando.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/LoginPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/SearchResultPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/SearchResultPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SimpleSearchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SimpleSearchTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -310,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693252054485</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="solved stale element exception">
+      <created>1693509960902</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1693509960902</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,6 +341,7 @@
     <MESSAGE value="added login page, login test" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="added login page and login test" />
-    <option name="LAST_COMMIT_MESSAGE" value="added login page and login test" />
+    <MESSAGE value="solved stale element exception" />
+    <option name="LAST_COMMIT_MESSAGE" value="solved stale element exception" />
   </component>
 </project>
