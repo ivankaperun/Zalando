@@ -40,10 +40,9 @@ public class LoginPage extends BasePage {
         passwordInputField.sendKeys(password);
     }
 
-    public void clickOnLoginButton() throws InterruptedException {
+    public void clickOnLoginButton() {
         loginButton.click();
         waitUntilPageIsFullyLoaded(wait);
-        //Thread.sleep(5000);
     }
 
 }

@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c9d52c84-01d7-4a96-9b31-66e2673e6442" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SearchResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SimpleSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SimpleSearchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LoginProcessTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginProcessTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -313,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693509960902</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="deleted unnecessary code and imports">
+      <created>1693510062076</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1693510062076</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,6 +348,7 @@
     <MESSAGE value="refactoring" />
     <MESSAGE value="added login page and login test" />
     <MESSAGE value="solved stale element exception" />
-    <option name="LAST_COMMIT_MESSAGE" value="solved stale element exception" />
+    <MESSAGE value="deleted unnecessary code and imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted unnecessary code and imports" />
   </component>
 </project>

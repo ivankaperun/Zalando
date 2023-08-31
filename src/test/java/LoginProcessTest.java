@@ -6,7 +6,7 @@ import pages.LoginPage;
 public class LoginProcessTest extends SetUp {
 
     @Test
-    public void loginProcessTest () throws InterruptedException {
+    public void loginProcessTest () {
         IndexPage indexPage = new IndexPage(driver);
         LoginPage loginPage = new LoginPage(driver);
 
