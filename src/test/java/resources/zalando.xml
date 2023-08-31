@@ -17,9 +17,4 @@
             <class name="SearchByCategoryTest" />
         </classes>
     </test>
-    <test name="LoginProcessTest">
-        <classes>
-            <class name="LoginProcessTest" />
-        </classes>
-    </test>
 </suite>

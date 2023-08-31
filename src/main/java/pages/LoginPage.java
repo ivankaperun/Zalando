@@ -43,7 +43,7 @@ public class LoginPage extends BasePage {
     public void clickOnLoginButton() throws InterruptedException {
         loginButton.click();
         waitUntilPageIsFullyLoaded(wait);
-        Thread.sleep(5000);
+        //Thread.sleep(5000);
     }
 
 }

@@ -36,7 +36,7 @@ public class SimpleSearchTest extends SetUp {
         PDPPage pdpPage = new PDPPage(driver);
 
         searchResultPage.scrollDownToThePaginationAndClickNextPage();
-        searchResultPage.clickOnBanner();
+        //searchResultPage.clickOnBanner();
         searchResultPage.clickFirstProductOnThePage();
 
         pdpPage.clickOnAddToCartButton();

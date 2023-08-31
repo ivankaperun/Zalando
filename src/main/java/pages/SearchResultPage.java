@@ -40,13 +40,17 @@ public class SearchResultPage extends BasePage {
 
     //methods
     public String getSearchResultsFirstElementText() {
-
-        if (searchResultElements.size()!=0) {
-            return (searchResultElements.get(0).getText());
+        By xpath_ = By.xpath("//article[@role='link']//h3[last()]");
+        String text = "";
+        try {
+            text = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(DEFAULT_TIMEOUT))
+                    .pollingEvery(Duration.ofSeconds(1L))
+                    .until(ExpectedConditions.visibilityOf(driver.findElements(xpath_).get(0))).getText();
         }
-        else {
-            return ("Array searchResultElements is empty");
+        catch (Exception e) {
+            System.out.println(e.getClass() + " -- " + e.getMessage());
         }
+        return text;
     }
     public String findProductWithHighestPrice() {
         ArrayList<Double> pricesList = new ArrayList<>();
@@ -84,7 +88,6 @@ public class SearchResultPage extends BasePage {
             return ("Array productsTitles is empty");
         }
     }
-
     public void clickOnBanner() {
         if (bannerContent.isDisplayed()) {
             bannerContent.click();
@@ -92,19 +95,26 @@ public class SearchResultPage extends BasePage {
     }
 
     public void scrollDownToThePaginationAndClickNextPage() {
+        String pageOneFirstProduct = getSearchResultsFirstElementText();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", paginationArrow);
+        //
+        clickOnBanner();
+        //
         paginationArrow.click();
+        new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_TIMEOUT)).until(driver -> {
+            while(true) {
+                String pageTwoFirstProduct = getSearchResultsFirstElementText();
+                if (!pageOneFirstProduct.equals(pageTwoFirstProduct)) break;
+            }
+            return true;
+        });
+
         waitUntilPageIsFullyLoaded(wait);
     }
 
     public void clickFirstProductOnThePage() {
-        //driver.navigate().refresh();
-        //create wait
-        //WebDriverWait myWait = new WebDriverWait(driver, Duration.ofSeconds(6));
-
-        waitVisibilityOfElement(DEFAULT_TIMEOUT,productsList.get(0));
-        waitForAjaxToComplete(DEFAULT_TIMEOUT);
+        waitVisibilityOfElement(DEFAULT_TIMEOUT, productsList.get(0));
         productsList.get(0).click();
         waitUntilPageIsFullyLoaded(wait);
     }
