@@ -1,19 +1,27 @@
 import org.testng.annotations.Test;
-import pages.CategoryPage;
-import pages.WomenClothPage;
+import pages.CategoryHomePage;
+import pages.PDPPage;
+import pages.SearchResultPage;
 
 import static org.testng.Assert.assertEquals;
 
 public class SearchByCategoryTest extends SetUp {
-    @Test
+    @Test(priority = 1)
     public void searchByCategoryTest () {
-        WomenClothPage womenClothPage = new WomenClothPage(driver);
-        CategoryPage categoryPage = new CategoryPage(driver);
+        CategoryHomePage categoryHomePage = new CategoryHomePage();
+        SearchResultPage searchResultPage = new SearchResultPage();
+        PDPPage pdpPage = new PDPPage();
 
-        womenClothPage.clickOnWomenClothingTab();
-        womenClothPage.searchByCategory();
-        String actual_result = categoryPage.getOpenedCategoryName();
-        System.out.println("Name of opened Category: " + actual_result);
-        assertEquals(actual_result,"Sweatshirts & Hoodies");
+        categoryHomePage.clickOnCustomerCategoryTab();
+        categoryHomePage.searchByCategory();
+        categoryHomePage.searchBySubCategory();
+
+        searchResultPage.scrollDownToThePaginationAndClickNextPageIfPaginationExist();
+        searchResultPage.clickFirstProductOnThePage();
+
+        pdpPage.clickOnAddToCartButton();
+        String actual_result = pdpPage.getNumberOfProductsInCart();
+        System.out.println("Number of products in Cart: " + actual_result);
+        assertEquals(actual_result, "1");
     }
 }

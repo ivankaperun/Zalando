@@ -1,53 +1,43 @@
 package pages;
 
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.support.ui.FluentWait;
 
-
-import java.time.Duration;
 import java.util.*;
 
-import static utils.Constants.DEFAULT_TIMEOUT;
+import static com.codeborne.selenide.Selenide.$$x;
+import static com.codeborne.selenide.Selenide.$x;
 
-public class SearchResultPage extends BasePage {
+public class SearchResultPage {
     //constructor
-    public SearchResultPage (WebDriver driver) {
-        super(driver);
-    }
+    public SearchResultPage () {}
     //elements
-    @FindBy(xpath = "//article[@role='link']//h3[last()]")
-    private List<WebElement> searchResultElements;
+    private ElementsCollection searchResultElements = $$x("//article[@role='link']//h3[last()]");
 
-    @FindBy(xpath = "//article[@role='link']//header/div/following-sibling::section//span")
-    private List<WebElement> productPricesList;
+    private ElementsCollection productPricesList = $$x("//article[@role='link']//header/div/following-sibling::section//span");
 
-    @FindBy(xpath = "//div[@data-zalon-partner-target='true']//article[@role='link']//a//header")
-    private List<WebElement> productsTitles;
+    private ElementsCollection productsTitles = $$x("//div[@data-zalon-partner-target='true']//article[@role='link']//a//header");
 
-    @FindBy(xpath = "//a[@title='next page']")
-    private WebElement paginationArrow;
+    private SelenideElement paginationArrow = $x("//a[@title='next page']");
 
-    @FindBy(xpath = "//button[@id='uc-btn-accept-banner']")
-    private WebElement bannerContent;
+    private SelenideElement bannerContent = $x("//button[@id='uc-btn-accept-banner']");
 
-    @FindBy(xpath = "//article[@role='link']")
-    private List<WebElement> productsList;
+    private ElementsCollection productsList = $$x("//article[@role='link']");
 
     //methods
     public String getSearchResultsFirstElementText() {
-        By xpath_ = By.xpath("//article[@role='link']//h3[last()]");
+
         String text = "";
         try {
-            text = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(DEFAULT_TIMEOUT))
-                    .pollingEvery(Duration.ofSeconds(1L))
-                    .until(ExpectedConditions.visibilityOf(driver.findElements(xpath_).get(0))).getText();
+            text = searchResultElements.first().shouldBe(Condition.visible).getText();
         }
         catch (Exception e) {
             System.out.println(e.getClass() + " -- " + e.getMessage());
         }
+
         return text;
     }
     public String findProductWithHighestPrice() {
@@ -62,9 +52,9 @@ public class SearchResultPage extends BasePage {
 
             return ("£" + pricesList.get(0));
         } else
-            {
-                return ("Array productPricesList is empty");
-            }
+        {
+            return ("Array productPricesList is empty");
+        }
     }
 
     public String getTitleAndPriceOfMostExpensiveProduct() {
@@ -86,35 +76,29 @@ public class SearchResultPage extends BasePage {
             return ("Array productsTitles is empty");
         }
     }
+
     public void clickOnBanner() {
         if (bannerContent.isDisplayed()) {
             bannerContent.click();
         }
     }
 
-    public void scrollDownToThePaginationAndClickNextPage() {
-        String pageOneFirstProduct = getSearchResultsFirstElementText();
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView();", paginationArrow);
-        //
-        clickOnBanner();
-        //
-        paginationArrow.click();
-        new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_TIMEOUT)).until(driver -> {
-            while(true) {
-                String pageTwoFirstProduct = getSearchResultsFirstElementText();
-                if (!pageOneFirstProduct.equals(pageTwoFirstProduct)) break;
+    public void scrollDownToThePaginationAndClickNextPageIfPaginationExist() {
+        if(paginationArrow.exists()) {
+            Selenide.executeJavaScript("arguments[0].scrollIntoView();", paginationArrow);
+            clickOnBanner();
+            if(paginationArrow.is(Condition.enabled)) {
+                paginationArrow.shouldBe(Condition.visible).click();
+                searchResultElements.first().shouldBe(Condition.visible);
             }
-            return true;
-        });
-
-        waitUntilPageIsFullyLoaded(wait);
+            else {
+                Selenide.executeJavaScript("window.scrollBy(0, -document.body.scrollHeight)");
+            }
+        }
     }
-
     public void clickFirstProductOnThePage() {
-        waitVisibilityOfElement(DEFAULT_TIMEOUT, productsList.get(0));
-        productsList.get(0).click();
-        waitUntilPageIsFullyLoaded(wait);
+        clickOnBanner();
+        productsList.first().shouldBe(Condition.exist);
+        productsList.first().shouldBe(Condition.visible).click();
     }
-
 }

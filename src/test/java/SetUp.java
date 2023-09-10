@@ -1,39 +1,33 @@
+import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.WebDriverRunner;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
-import java.time.Duration;
-
-
 public class SetUp {
-    public WebDriver driver;
 
     @BeforeClass
     @Parameters({"browser","url", "timeout"})
-    protected void setUpBrowser(String browser, String url, long timeout) {
-        if(browser.equalsIgnoreCase("chrome")) {
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
-            driver.get(url);
-            driver.manage().window().maximize();
-        }
-        if(browser.equalsIgnoreCase("firefox")) {
-            WebDriverManager.chromedriver().setup();
-            driver = new FirefoxDriver();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
-            driver.get(url);
-            driver.manage().window().maximize();
-        }
+    protected void configureDriver(String browser, String url, long timeout) {
+        //Selenide configs
+        Configuration.timeout = timeout;
+        Configuration.screenshots = false;
+        //Webdriver create
+        WebDriverManager.chromedriver().setup();
+        final WebDriver webDriver = new ChromeDriver();
+        webDriver.manage().deleteAllCookies();
+        webDriver.manage().window().maximize();
+        //Selenide add webdriver
+        WebDriverRunner.setWebDriver(webDriver);
+        Selenide.open(url);
     }
 
-    @AfterClass
-    protected void tearDown() {
-        driver.quit();
+    @AfterClass(alwaysRun = true)
+    protected void cleanUp() {
+        WebDriverRunner.getWebDriver().quit();
     }
-
 }
