@@ -4,32 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9d52c84-01d7-4a96-9b31-66e2673e6442" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="c9d52c84-01d7-4a96-9b31-66e2673e6442" name="Changes" comment="rework with selenide">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/CategoryPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/IndexPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/IndexPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/CategoryHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/CategoryHomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/PDPPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/PDPPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SearchResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/WomenClothPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/CategoryHomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LoginProcessTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SearchByCategoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SearchByCategoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SetUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SetUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SimpleSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SimpleSearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/zalando.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/zalando.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/BasePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/IndexPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/IndexPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/LoginPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/PDPPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/PDPPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/SearchResultPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/SearchResultPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/WomenClothPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/LoginProcessTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SearchByCategoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SearchByCategoryTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SetUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SetUp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SimpleSearchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SimpleSearchTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,13 +40,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Ivanna_Lozynska-Peru/IdeaProjects/ZalandoDemo",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ivanna_Lozynska-Peru/IdeaProjects/ZalandoDemo&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="TestNG.C:/Users/Ivanna_Lozynska-Peru/IdeaProjects/Zalando/src/test/java/resources/zalando.xml">
     <configuration name="C:/Users/Ivanna_Lozynska-Peru/IdeaProjects/Zalando/src/test/java/resources/zalando.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Zalando" />
@@ -349,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693510190069</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="rework with selenide">
+      <created>1694366809712</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1694366809712</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,6 +364,7 @@
     <MESSAGE value="solved stale element exception" />
     <MESSAGE value="deleted unnecessary code and imports" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="rework with selenide" />
+    <option name="LAST_COMMIT_MESSAGE" value="rework with selenide" />
   </component>
 </project>

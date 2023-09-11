@@ -19,20 +19,21 @@ public class CategoryHomePage {
 
     private ElementsCollection subCategories = $$x("//div[@data-testid='categories-container']//div//a[@color='primary']");
 
+    public int generateRandom(ElementsCollection array) {
+        return (int) Math.floor(Math.random()*array.size());
+    }
     public void clickOnBanner() {
         if (bannerContent.isDisplayed()) {
             bannerContent.click();
         }
     }
     public void clickOnCustomerCategoryTab() {
-        int random = (int) Math.floor(Math.random()*customerCategory.size());
-        System.out.println("Selected customer category sequence number is - " + random);
-        customerCategory.get(random).shouldBe(Condition.visible).click();
+        customerCategory.get(generateRandom(customerCategory)).shouldBe(Condition.visible).click();
         bannerContent.shouldBe(Condition.visible);
         clickOnBanner();
     }
     public void searchByCategory() {
-        int random = (int) Math.floor(Math.random()*categoryClothing.size());
+        int random = generateRandom(categoryClothing);
         System.out.println("Selected category sequence number is - " + random);
         if(random!=1 || random!=8) {
             categoryClothing.get(random).shouldBe(Condition.visible).hover();
@@ -41,9 +42,6 @@ public class CategoryHomePage {
         }
     }
     public void searchBySubCategory() {
-        clickOnBanner();
-        int random = (int) Math.floor(Math.random()*subCategories.size());
-        System.out.println("Selected sub category sequence number is - " + random);
-        subCategories.get(random).shouldBe(Condition.visible).hover().click();
+        subCategories.get(generateRandom(subCategories)).shouldBe(Condition.visible).hover().click();
     }
 }

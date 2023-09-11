@@ -16,7 +16,7 @@ public class PDPPage {
 
     private SelenideElement chooseYourSize = $x("//button[@id='picker-trigger']");
 
-    private ElementsCollection sizes = $$x("//label[@data-testid='pdp-stockAvailable-label']");
+    private ElementsCollection sizes = $$x("//label[@data-testid='pdp-stockAvailable-label']/span/div");
 
     private SelenideElement bannerContent = $x("//button[@id='uc-btn-accept-banner']");
 
@@ -31,7 +31,7 @@ public class PDPPage {
         if(chooseYourSize.exists()) {
             addToCartButton.shouldBe(Condition.visible).click();
             if (sizes.first().exists()) {
-                sizes.first().shouldBe(Condition.visible).click();
+                sizes.first().shouldBe(Condition.visible).hover().click();
             }
         }
         else {
