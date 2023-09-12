@@ -34,7 +34,6 @@ public class CategoryHomePage {
     }
     public void searchByCategory() {
         int random = generateRandom(categoryClothing);
-        System.out.println("Selected category sequence number is - " + random);
         if(random!=1 || random!=8) {
             categoryClothing.get(random).shouldBe(Condition.visible).hover();
         } else {

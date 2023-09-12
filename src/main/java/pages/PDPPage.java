@@ -16,7 +16,7 @@ public class PDPPage {
 
     private SelenideElement chooseYourSize = $x("//button[@id='picker-trigger']");
 
-    private ElementsCollection sizes = $$x("//label[@data-testid='pdp-stockAvailable-label']/span/div");
+    private ElementsCollection sizes = $$x("//div[@role='listbox']//div[@data-indicator='border']//label[@data-testid='pdp-stockAvailable-label']/span");
 
     private SelenideElement bannerContent = $x("//button[@id='uc-btn-accept-banner']");
 
@@ -26,17 +26,20 @@ public class PDPPage {
         }
     }
     public void clickOnAddToCartButton() {
-        clickOnBanner();
         addToCartButton.isDisplayed();
+        System.out.println("from clickOnAddToCartButton method");
         if(chooseYourSize.exists()) {
+            System.out.println("from 1st if block of clickOnAddToCartButton method");
             addToCartButton.shouldBe(Condition.visible).click();
-            if (sizes.first().exists()) {
+            if (sizes.first().exists() && sizes.first().isDisplayed()) {
+                for(SelenideElement size:sizes) {
+                    System.out.println(size.getText());
+                }
+                System.out.println("from 2nd if block of clickOnAddToCartButton method");
                 sizes.first().shouldBe(Condition.visible).hover().click();
             }
         }
-        else {
-            addToCartButton.shouldBe(Condition.visible).click();
-        }
+        addToCartButton.shouldBe(Condition.visible).click();
     }
     public String getNumberOfProductsInCart() {
         return productsCartCounter.shouldBe(Condition.visible).getText();
