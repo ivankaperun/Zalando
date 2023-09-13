@@ -82,7 +82,6 @@ public class SearchResultPage {
             bannerContent.click();
         }
     }
-
     public void scrollDownToThePaginationAndClickNextPageIfPaginationExist() {
         if(paginationArrow.exists()) {
             Selenide.executeJavaScript("arguments[0].scrollIntoView();", paginationArrow);

@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9d52c84-01d7-4a96-9b31-66e2673e6442" name="Changes" comment="rework with selenide">
+    <list default="true" id="c9d52c84-01d7-4a96-9b31-66e2673e6442" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/CategoryHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/CategoryHomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/PDPPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/PDPPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/CategoryHomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/CategoryHomePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/PDPPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/PDPPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SearchResultPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -343,14 +342,20 @@
       <option name="project" value="LOCAL" />
       <updated>1694418190271</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="rework add to cart method">
+      <created>1694522755603</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1694522755603</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added logging" />
     <MESSAGE value="remove logging" />
     <MESSAGE value="added parameters usage to .xml file" />
     <MESSAGE value="added method that prints most expensive product title and price on the page" />
@@ -375,6 +380,7 @@
     <MESSAGE value="refactoring" />
     <MESSAGE value="rework with selenide" />
     <MESSAGE value="added method that generate random number" />
-    <option name="LAST_COMMIT_MESSAGE" value="added method that generate random number" />
+    <MESSAGE value="rework add to cart method" />
+    <option name="LAST_COMMIT_MESSAGE" value="rework add to cart method" />
   </component>
 </project>

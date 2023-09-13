@@ -34,10 +34,10 @@ public class CategoryHomePage {
     }
     public void searchByCategory() {
         int random = generateRandom(categoryClothing);
-        if(random!=1 || random!=8) {
-            categoryClothing.get(random).shouldBe(Condition.visible).hover();
-        } else {
+        if(random==1 || random==8) {
             categoryClothing.get(random+1).hover();
+        } else {
+            categoryClothing.get(random).shouldBe(Condition.visible).hover();
         }
     }
     public void searchBySubCategory() {
