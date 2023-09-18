@@ -7,6 +7,7 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.*;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
@@ -41,16 +42,11 @@ public class SearchResultPage {
         return text;
     }
     public String findProductWithHighestPrice() {
-        ArrayList<Double> pricesList = new ArrayList<>();
 
         if(productPricesList.size()!=0) {
-            for (WebElement productPrice : productPricesList) {
-                pricesList.add(Double.parseDouble(productPrice.getText().replace("£", "")));
-            }
 
-            pricesList.sort(Collections.reverseOrder());
-
-            return ("£" + pricesList.get(0));
+           return "£" + productPricesList.stream().map(entry -> Double.parseDouble(entry.getText().
+                   replace("£", ""))).sorted(Collections.reverseOrder()).toList().get(0);
         } else
         {
             return ("Array productPricesList is empty");
@@ -96,7 +92,6 @@ public class SearchResultPage {
         }
     }
     public void clickFirstProductOnThePage() {
-        clickOnBanner();
         productsList.first().shouldBe(Condition.exist);
         productsList.first().shouldBe(Condition.visible).click();
     }
