@@ -6,7 +6,12 @@
     <parameter name="url" value="https://www.zalando.co.uk/"/>
     <parameter name="timeout" value="10000"/>
     <parameter name="searchKey" value="bags"/>
+    <parameter name="username" value="pufyederda@gufum.com"/>
+    <parameter name="password" value="pufyederda"/>
 
+    <listeners>
+        <listener class-name="Listeners.RetryListener"/>
+    </listeners>
     <test name="SimpleSearchTest" >
         <classes>
             <class name="SimpleSearchTest" />
@@ -15,6 +20,11 @@
     <test name="SearchByCategoryTest" >
         <classes>
             <class name="SearchByCategoryTest" />
+        </classes>
+    </test>
+    <test name="LoginTest" >
+        <classes>
+            <class name="LoginTest" />
         </classes>
     </test>
 </suite>

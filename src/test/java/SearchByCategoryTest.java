@@ -6,7 +6,7 @@ import pages.SearchResultPage;
 import static org.testng.Assert.assertEquals;
 
 public class SearchByCategoryTest extends SetUp {
-    @Test(priority = 1)
+    @Test
     public void searchByCategoryTest () {
         CategoryHomePage categoryHomePage = new CategoryHomePage();
         SearchResultPage searchResultPage = new SearchResultPage();

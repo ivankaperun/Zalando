@@ -25,6 +25,7 @@ public class SimpleSearchTest extends SetUp {
 
     @Test(priority = 2)
     public void findMostExpensiveProductTest () {
+
         String productWithHighestPrice = searchResultPage.findProductWithHighestPrice();
         System.out.println("Highest price for found products is " + productWithHighestPrice);
 
