@@ -9,9 +9,11 @@
     <parameter name="username" value="pufyederda@gufum.com"/>
     <parameter name="password" value="pufyederda"/>
 
+    <!--
     <listeners>
         <listener class-name="Listeners.RetryListener"/>
     </listeners>
+    -->
     <test name="SimpleSearchTest" >
         <classes>
             <class name="SimpleSearchTest" />

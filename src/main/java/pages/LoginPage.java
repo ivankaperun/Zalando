@@ -2,10 +2,9 @@ package pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import org.checkerframework.checker.units.qual.C;
+import com.codeborne.selenide.WebDriverRunner;
 
-import static com.codeborne.selenide.Selenide.$x;
-import static com.codeborne.selenide.Selenide.actions;
+import static com.codeborne.selenide.Selenide.*;
 
 public class LoginPage {
     public LoginPage() {}
@@ -15,7 +14,7 @@ public class LoginPage {
     private SelenideElement loginEmail =$x("//input[@id='login.email']");
     private SelenideElement loginPassword = $x("//input[@id='login.secret']");
     private SelenideElement logIn = $x("//button[@data-testid='login_button']");
-    private SelenideElement myAccount = $x("//a[@href='/myaccount/']//span");
+    private SelenideElement myAccount = $x("//a[@href='/logout/']/span");
 
     public void goToLoginProcess() {
         accountIcon.shouldBe(Condition.visible);
@@ -33,8 +32,10 @@ public class LoginPage {
         logIn.shouldBe(Condition.visible).click();
     }
     public String verifyLoginProcess() {
-        accountIcon.shouldBe(Condition.visible);
+        return WebDriverRunner.getWebDriver().getCurrentUrl();
+        /*accountIcon.shouldBe(Condition.visible);
         actions().moveToElement(accountIcon).perform();
         return myAccount.shouldBe(Condition.visible).getText();
+         */
     }
 }

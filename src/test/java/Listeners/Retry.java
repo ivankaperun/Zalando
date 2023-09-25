@@ -2,32 +2,29 @@ package Listeners;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 public class Retry implements IRetryAnalyzer {
-    private static final int    maxTry = 3;
-    private              int    count  = 0;
-    public String getResultStatusName (final int status) {
-        String resultName = null;
-        if (status == 1) {
-            resultName = "SUCCESS";
-        }
-        if (status == 2) {
-            resultName = "FAILURE";
-        }
-        if (status == 3) {
-            resultName = "SKIP";
-        }
-        return resultName;
-    }
 
+    int retryCount = 0;
+    int maxRetryCount = 2;
     @Override
-    public boolean retry (final ITestResult iTestResult) {
-        if (!iTestResult.isSuccess ()) {
-            if (this.count < maxTry) {
-                System.out.println("Retrying test " + iTestResult.getName () + " with status " + getResultStatusName (
-                        iTestResult.getStatus ()) + " for the " + (this.count + 1) + " time(s).");
-                this.count++;
-                return true;
+    public boolean retry(ITestResult result) {
+        if(!result.isSuccess()) {                         //Check if test is failed
+
+            if(retryCount<maxRetryCount) {                //Check if the maximum number of test execution is reached
+                System.out.println("Retrying Test : Re-running " + result.getName() +
+                        " for " + (retryCount+1) + " time(s)."); //Print the number of Retry attempts
+
+                retryCount++;                             //Increase the maxRetryCount by 1
+
+                result.setStatus(ITestResult.FAILURE);    //Mark test as failed
+                return true;                                 //Rerun the failed test
+            } else {
+                result.setStatus(ITestResult.FAILURE);    //TestNG marks last run as failed, if last run is max retry
             }
+        } else {
+            result.setStatus(ITestResult.SUCCESS);    //TestNG parks test as passed when the test passes
+
         }
+
         return false;
     }
 }
