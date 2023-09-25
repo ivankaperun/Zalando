@@ -7,24 +7,19 @@ public class Retry implements IRetryAnalyzer {
     int maxRetryCount = 2;
     @Override
     public boolean retry(ITestResult result) {
-        if(!result.isSuccess()) {                         //Check if test is failed
-
-            if(retryCount<maxRetryCount) {                //Check if the maximum number of test execution is reached
+        if(!result.isSuccess()) {
+            if(retryCount<maxRetryCount) {
                 System.out.println("Retrying Test : Re-running " + result.getName() +
-                        " for " + (retryCount+1) + " time(s)."); //Print the number of Retry attempts
-
-                retryCount++;                             //Increase the maxRetryCount by 1
-
-                result.setStatus(ITestResult.FAILURE);    //Mark test as failed
-                return true;                                 //Rerun the failed test
+                        " for " + (retryCount+1) + " time(s).");
+                retryCount++;
+                result.setStatus(ITestResult.FAILURE);
+                return true;
             } else {
-                result.setStatus(ITestResult.FAILURE);    //TestNG marks last run as failed, if last run is max retry
+                result.setStatus(ITestResult.FAILURE);
             }
         } else {
-            result.setStatus(ITestResult.SUCCESS);    //TestNG parks test as passed when the test passes
-
+            result.setStatus(ITestResult.SUCCESS);
         }
-
         return false;
     }
 }

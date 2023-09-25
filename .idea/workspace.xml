@@ -8,9 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Listeners/Retry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Listeners/Retry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Listeners/RetryListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Listeners/RetryListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/zalando.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/zalando.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -373,14 +371,20 @@
       <option name="project" value="LOCAL" />
       <updated>1695628910454</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="changes assertion for login test">
+      <created>1695650581084</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1695650581084</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="replace for loop by enhanced for loop" />
     <MESSAGE value="replace Collections.sort by list.sort" />
     <MESSAGE value="replace HashMap with TreeMap" />
     <MESSAGE value="added try catch blocks to handle possible exceptions" />
@@ -405,7 +409,8 @@
     <MESSAGE value="fixed add to cart method" />
     <MESSAGE value="findProductWithHighestPrice rewrite using streams, added parallel execution of tests" />
     <MESSAGE value="Implemented LoginTest (predefined, that test will be failing each time) and RetryAnalyzer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented LoginTest (predefined, that test will be failing each time) and RetryAnalyzer" />
+    <MESSAGE value="changes assertion for login test" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes assertion for login test" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

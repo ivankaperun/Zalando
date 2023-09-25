@@ -14,7 +14,6 @@ public class LoginPage {
     private SelenideElement loginEmail =$x("//input[@id='login.email']");
     private SelenideElement loginPassword = $x("//input[@id='login.secret']");
     private SelenideElement logIn = $x("//button[@data-testid='login_button']");
-    private SelenideElement myAccount = $x("//a[@href='/logout/']/span");
 
     public void goToLoginProcess() {
         accountIcon.shouldBe(Condition.visible);
@@ -33,9 +32,5 @@ public class LoginPage {
     }
     public String verifyLoginProcess() {
         return WebDriverRunner.getWebDriver().getCurrentUrl();
-        /*accountIcon.shouldBe(Condition.visible);
-        actions().moveToElement(accountIcon).perform();
-        return myAccount.shouldBe(Condition.visible).getText();
-         */
     }
 }
