@@ -5,7 +5,7 @@ import pages.LoginPage;
 import static org.testng.Assert.assertFalse;
 
 public class LoginTest extends SetUp {
-    @Test(retryAnalyzer = Retry.class)
+    @Test
     @Parameters({"username", "password"})
     public void loginTest(String username, String password) {
         LoginPage loginPage = new LoginPage();
@@ -16,6 +16,8 @@ public class LoginTest extends SetUp {
         loginPage.setLoginPassword(password);
         loginPage.doLogIn();
         String actual_result = loginPage.verifyLoginProcess();
+        System.out.println(actual_result);
+        System.out.println(expected_result);
         assertFalse(actual_result.contains(expected_result));
     }
 }

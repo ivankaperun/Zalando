@@ -7,7 +7,6 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.*;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;

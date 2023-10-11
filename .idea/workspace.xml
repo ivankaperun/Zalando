@@ -6,9 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="c9d52c84-01d7-4a96-9b31-66e2673e6442" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SearchResultPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Listeners/Retry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Listeners/Retry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SearchByCategoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SearchByCategoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SetUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SetUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/zalando.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/zalando.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/SearchResultPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/SearchResultPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Listeners/Retry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Listeners/Retry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/LoginTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/LoginTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SearchByCategoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SearchByCategoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SetUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SetUp.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +58,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
   <component name="RunManager" selected="TestNG.C:/Users/Ivanna_Lozynska-Peru/IdeaProjects/Zalando/src/test/java/resources/zalando.xml">
     <configuration name="C:/Users/Ivanna_Lozynska-Peru/IdeaProjects/Zalando/src/test/java/resources/zalando.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Zalando" />
@@ -378,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695650581084</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="refactoring">
+      <created>1695650736996</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1695650736996</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,7 +423,6 @@
     <MESSAGE value="added login page and login test" />
     <MESSAGE value="solved stale element exception" />
     <MESSAGE value="deleted unnecessary code and imports" />
-    <MESSAGE value="refactoring" />
     <MESSAGE value="rework with selenide" />
     <MESSAGE value="added method that generate random number" />
     <MESSAGE value="rework add to cart method" />
@@ -410,7 +430,8 @@
     <MESSAGE value="findProductWithHighestPrice rewrite using streams, added parallel execution of tests" />
     <MESSAGE value="Implemented LoginTest (predefined, that test will be failing each time) and RetryAnalyzer" />
     <MESSAGE value="changes assertion for login test" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes assertion for login test" />
+    <MESSAGE value="refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
