@@ -3,6 +3,8 @@ import org.testng.annotations.Test;
 import pages.IndexPageMobile;
 import pages.SearchResultPageMobile;
 
+import static org.testng.Assert.assertEquals;
+
 public class SimpleSearchTestMobile extends SetUp {
     private SearchResultPageMobile searchResultPageMobile;
     @Test(priority = 1)
@@ -14,6 +16,7 @@ public class SimpleSearchTestMobile extends SetUp {
         indexPageMobile.setSearchInput(searchKey);
         indexPageMobile.clickSearchResultsAutoSuggestions();
 
+        assertEquals(searchResultPageMobile.checkProductCardsAvailability(), true);
         String firstItemText = searchResultPageMobile.getSearchResultsFirstElementText();
         System.out.println("First product name is " + firstItemText);
     }

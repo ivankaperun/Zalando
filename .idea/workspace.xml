@@ -6,22 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c9d52c84-01d7-4a96-9b31-66e2673e6442" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/1695651389119.0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/1695651399373.1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/1695651483251.0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/1695651493486.1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/1695991597749.0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/1695991607911.1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/1695991895447.0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/1695991905699.1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/1695998488918.0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/1695998498998.1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/1696313692231.0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/1696313704589.1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/1696313717339.2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/1696487430644.0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/1696487460251.1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/1696487490302.2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/SearchResultPageMobile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SearchResultPageMobile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SimpleSearchTestMobile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SimpleSearchTestMobile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/zalando.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/zalando.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/IndexPageMobile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/IndexPageMobile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/SearchResultPageMobile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/SearchResultPageMobile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SetUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SetUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SimpleSearchTestMobile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SimpleSearchTestMobile.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -410,14 +401,20 @@
       <option name="project" value="LOCAL" />
       <updated>1697021035353</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="removed .html files">
+      <created>1697021083633</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1697021083633</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="replace HashMap with TreeMap" />
     <MESSAGE value="added try catch blocks to handle possible exceptions" />
     <MESSAGE value="replace Collections.sort with list.sort" />
     <MESSAGE value="added new PaginationPage" />
@@ -442,7 +439,8 @@
     <MESSAGE value="changes assertion for login test" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="added IndexPageMobile, SearchResultPageMobile, SimpleSearchTestMobile, modification for SetUp class for mobile tests, added SimpleSearchTestMobile to .xml file as well" />
-    <option name="LAST_COMMIT_MESSAGE" value="added IndexPageMobile, SearchResultPageMobile, SimpleSearchTestMobile, modification for SetUp class for mobile tests, added SimpleSearchTestMobile to .xml file as well" />
+    <MESSAGE value="removed .html files" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed .html files" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
