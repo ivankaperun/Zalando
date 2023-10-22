@@ -1,3 +1,9 @@
 pages\BasePage.class
-pages\IndexPage.class
 pages\SearchResultPage.class
+utils\Constants.class
+pages\PDPPage.class
+pages\LoginPage.class
+pages\CategoryHomePage.class
+pages\IndexPageMobile.class
+pages\SearchResultPageMobile.class
+pages\IndexPage.class

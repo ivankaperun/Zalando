@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Zalando_tests" class="navigator-link ">
-                    <span>C:\Users\Ivanna_Lozynska-Peru\IdeaProjects\ZalandoDemo\src\test\java\resources\zalando.xml</span>
+                    <span>C:\Users\Ivanna_Lozynska-Peru\IdeaProjects\Zalando\src\test\java\resources\zalando-mobile.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Zalando_tests">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Zalando_tests" title="SimpleSearchTest" class="method navigator-link" hash-for-method="simpleSearchTest">simpleSearchTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Zalando_tests" title="SimpleSearchTestMobile" class="method navigator-link" hash-for-method="simpleSearchTestMobile(bags)">simpleSearchTestMobile(bags)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Zalando_tests -->
@@ -121,14 +121,15 @@
           <div class="suite-Zalando_tests-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">SimpleSearchTest</span>
+              <span class="class-name">SimpleSearchTestMobile</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="simpleSearchTest">
-                  </a> <!-- simpleSearchTest -->
-                  <span class="method-name">simpleSearchTest</span>
+                  <a name="simpleSearchTestMobile(bags)">
+                  </a> <!-- simpleSearchTestMobile(bags) -->
+                  <span class="method-name">simpleSearchTestMobile</span>
+                  <span class="parameters">(bags)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,18 +137,26 @@
         </div> <!-- panel Zalando_tests -->
         <div panel-name="test-xml-Zalando_tests" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Ivanna_Lozynska-Peru\IdeaProjects\ZalandoDemo\src\test\java\resources\zalando.xml</span>
+            <span class="header-content">C:\Users\Ivanna_Lozynska-Peru\IdeaProjects\Zalando\src\test\java\resources\zalando-mobile.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Zalando tests&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;SimpleSearchTest&quot; verbose=&quot;0&quot;&gt;
+&lt;suite parallel=&quot;tests&quot; name=&quot;Zalando tests&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+  &lt;parameter name=&quot;searchKey&quot; value=&quot;bags&quot;/&gt;
+  &lt;parameter name=&quot;remote&quot; value=&quot;true&quot;/&gt;
+  &lt;parameter name=&quot;url&quot; value=&quot;https://www.zalando.co.uk/&quot;/&gt;
+  &lt;parameter name=&quot;timeout&quot; value=&quot;10000&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;Listeners.RetryListener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;SimpleSearchTestMobile&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;SimpleSearchTest&quot;/&gt;
+      &lt;class name=&quot;SimpleSearchTestMobile&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- SimpleSearchTest --&gt;
+  &lt;/test&gt; &lt;!-- SimpleSearchTestMobile --&gt;
 &lt;/suite&gt; &lt;!-- Zalando tests --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -159,7 +168,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">SimpleSearchTest (1 class)</span>
+                <span class="test-name">SimpleSearchTestMobile (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -187,14 +196,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'simpleSearchTest')
-data.setCell(0, 2, 'SimpleSearchTest')
-data.setCell(0, 3, 2809);
+data.setCell(0, 1, 'simpleSearchTestMobile')
+data.setCell(0, 2, 'SimpleSearchTestMobile')
+data.setCell(0, 3, 2358);
 window.suiteTableData['Zalando_tests']= { tableData: data, tableDiv: 'times-div-Zalando_tests'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-Zalando_tests">
               </div> <!-- times-div-Zalando_tests -->
             </div> <!-- times-div -->
@@ -220,18 +229,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">SimpleSearchTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">SimpleSearchTestMobile</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpBrowser</span>
+                <span class="method-name">configureDriver(chrome, https://www.zalando.co.uk/, 10000)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">simpleSearchTest</span>
-                <span class="method-start">8965 ms</span>
+                <span class="method-name">simpleSearchTestMobile(bags)</span>
+                <span class="method-start">2843 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">11777 ms</span>
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">5203 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

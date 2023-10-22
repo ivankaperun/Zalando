@@ -1,2 +1,7 @@
-SimpleSearchTest.class
+SimpleSearchTestMobile.class
+Listeners\RetryListener.class
+SearchByCategoryTest.class
 SetUp.class
+Listeners\Retry.class
+SimpleSearchTest.class
+LoginTest.class

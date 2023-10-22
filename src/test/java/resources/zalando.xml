@@ -13,24 +13,23 @@
     <listeners>
         <listener class-name="Listeners.RetryListener"/>
     </listeners>
+        <test name="SimpleSearchTest" >
+            <classes>
+                <class name="SimpleSearchTest" />
+            </classes>
+        </test>
+        <test name="SearchByCategoryTest" >
+            <classes>
+                <class name="SearchByCategoryTest" />
+            </classes>
+        </test>
 
-            <test name="SimpleSearchTest" >
-                <classes>
-                    <class name="SimpleSearchTest" />
-                </classes>
-            </test>
-            <test name="SearchByCategoryTest" >
-                <classes>
-                    <class name="SearchByCategoryTest" />
-                </classes>
-            </test>
-
-            <test name="LoginTest" >
-                <classes>
-                    <class name="LoginTest" >
-                    </class>
-                </classes>
-            </test>
+        <test name="LoginTest" >
+            <classes>
+                <class name="LoginTest" >
+                </class>
+            </classes>
+        </test>
 
     <!-- FOR MOBILE
               <test name="SimpleSearchTestMobile" >
@@ -38,5 +37,5 @@
                       <class name="SimpleSearchTestMobile" />
                   </classes>
               </test>
-    -->
+-->
     </suite>

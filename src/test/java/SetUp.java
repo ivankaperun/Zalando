@@ -9,9 +9,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.*;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.Properties;
 
 public class SetUp {
     //For remote Lambda tests launch
@@ -21,20 +24,34 @@ public class SetUp {
 
     @BeforeClass
     //@BeforeMethod //for retry analyzer as it works on method level
-    @Parameters({"browser", "url","timeout"})
-    protected void configureDriver(String browser, String url, long timeout) {
+    @Parameters({"browser", "url", "timeout"})
+    protected void configureDriver(String browser, String url, long timeout) throws IOException {
         //Selenide configs
         Configuration.timeout = timeout;
         Configuration.screenshots = false;
+        String activeProfile=null;
 
+        //Get active profile value
+        Properties prop = new Properties();
+        try (InputStream resourceAsStream = getClass().getClassLoader().getResourceAsStream("project.properties")) {
+            prop.load(resourceAsStream);
+            activeProfile = (String) prop.get("active.profile");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         //WebDriver create
         WebDriverManager.chromedriver().setup();
         final WebDriver webDriver = new ChromeDriver();
         webDriver.manage().deleteAllCookies();
-        webDriver.manage().window().maximize();
-
-        //for iPhone 14 pro:
-        //webDriver.manage().window().setSize(new Dimension(390,844));
+        if ("desktop-tests".equals(activeProfile)) {
+            System.out.println("Setting up for desktop testing");
+            webDriver.manage().window().maximize();
+        } else if ("mobile-tests".equals(activeProfile)) {
+            System.out.println("Setting up for mobile testing");
+            webDriver.manage().window().setSize(new Dimension(390,844));
+        } else {
+            System.out.println("Unknown or no active profile specified");
+        }
 
         //Selenide add webDriver
         WebDriverRunner.setWebDriver(webDriver);
@@ -46,8 +63,6 @@ public class SetUp {
     protected void cleanUp() {
         WebDriverRunner.getWebDriver().quit();
     }
-
-
 
     // For remote lambda tests launch
     /*
